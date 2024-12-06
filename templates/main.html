@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Opinion</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+<body>
+  <div class="content">
+    <div class="profile">
+      <img src="{{ url_for('static', filename='assets/pp.jpeg') }}" alt="">
+      <h1>Winston Zeddemore</h1>
+    </div>
+    <hr>
+    <h1>About</h1>
+    <p><strong>Ipsum is simply dummy text</strong> of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    <hr>
+    <div class="comment">
+      <h1>Comment</h1>
+      <div class="comment-grid">
+        {% for comment in comments %}
+        <div class="item">
+          <h4>{{comment.username}}</h4>
+          <hr>
+          <p>{{comment.comment}}</p>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    <button class="comment-btn" onclick="show()">New Comment</button>
+    <div class="form-comment" id="form-comment">
+      <form action="" method="post">
+        <h4>New Comment</h4>
+        <input type="text" name="username" placeholder="your name.....">
+        <textarea name="comment" id="comment" placeholder="comment....."></textarea>
+        <button type="submit">Send</button>       
+      </form>
+      <button onclick="hide()">Cancel</button>
+    </div>
+    <hr>
+  </div>
+  <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>

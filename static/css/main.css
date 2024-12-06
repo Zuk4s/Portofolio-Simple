@@ -1,0 +1,148 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  background-color: #3E2C41;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: rgb(143, 148, 153);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  overflow: scroll;
+  gap: 20px;
+}
+
+hr {
+  width: 99%;
+  color: #261C2C;
+}
+
+p {
+  padding: 15px;
+}
+
+.profile {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.profile img {
+  border: 2px solid #261C2C;
+  border-radius: 100%;
+  width: 200px;
+  height: 200px;
+}
+
+
+.comment {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  user-select: none;
+}
+
+.comment .comment-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.comment-btn {
+  width: 100px;
+  height: auto;
+  display: flex;
+  padding: 10px;
+  background-color: #261C2C;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+  color: white;
+  cursor: pointer;
+}
+
+.comment-btn:hover {
+  box-shadow: none;
+}
+
+.item {
+  background-color: #261C2C;
+  padding: 8px;
+  border-radius: 5px;
+  text-align: start;
+  width: 260px;
+  height: 200px;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+.item hr {
+  color: #3E2C41;
+  width: 100%;
+}
+
+.form-comment {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 400px;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-comment form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.form-comment input {
+  width: 100%;
+  height: auto;
+  padding: 10px 8px;
+  border: 2px solid #ececec;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  outline: none;
+  color: white;
+}
+
+.form-comment textarea {
+  width: 100%;
+  height: 200px;
+  outline: none;
+  padding: 10px 8px;
+  border: 2px solid white;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: white;
+}
+
+.form-comment button {
+  width: 100%;
+  height: auto;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 10px;
+  background-color: white;
+}
